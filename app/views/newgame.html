@@ -1,0 +1,16 @@
+
+
+<div class="col-lg-4">
+     <button class="btn btn-info" ng-click="newplayer=!newplayer">Add New Player</button>
+    <input type="text" ng-show="newplayer" placeholder="Enter the name of the new player"  class="form-control">
+</div>
+
+<div class="col-lg-4">
+    <h1>Players</h1>
+    <ul class="list-unstyled" ng-repeat="player in players">
+        <li>{{player}}</li>
+    </ul>
+</div>
+<div class="col-lg-8">
+    <a href="#/play" class="btn btn-danger btn-lg col-lg-8">Play!</a>
+</div>
