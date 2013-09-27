@@ -3,33 +3,6 @@
   <h3>A Makey Makey Game</h3>
 
   <ul class="list-inline">
-      <li><img src="img/monkey0.jpg" alt="monkey" width="250" id="key_37"></li>
-      <li><img src="img/monkey0.jpg" alt="monkey" width="250" id="key_38"></li>
-      <li><img src="img/monkey0.jpg" alt="monkey" width="250" id="key_39"></li>
-      <li><img src="img/monkey0.jpg" alt="monkey" width="250" id="key_40"></li>
-
+      <li ng-repeat="monkey in monkeys" class="monkey" ng-class="{enabled: monkey.state, disabled: !monkey.state}"></li>
   </ul>
 </div>
-<script>
-
-        document.body.onkeydown = function(event) {
-            var target = document.getElementById('key_' + event.keyCode);
-            target.src = target.src.replace("0", "4");
-            alert(target);
-        };
-
-        var convertKeyCode = function(keyCode) {
-            switch(keyCode) {
-                case 37:
-                    return 'LEFT';
-                case 38:
-                    return 'UP';
-                case 39:
-                    return 'RIGHT';
-                case 40:
-                    return 'DOWN';
-                default:
-                    return String.fromCharCode(keyCode);
-            }
-        };
-    </script>

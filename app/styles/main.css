@@ -1,1 +1,12 @@
 /* Will be compiled down to a single stylesheet with your sass files */
+.monkey {
+	width: 250px;
+	height: 250px;
+}
+
+.monkey.enabled {
+	background: url('../img/monkey0.jpg') no-repeat;
+}
+.monkey.disabled {
+	background: url('../img/monkey4.jpg') no-repeat;
+}
