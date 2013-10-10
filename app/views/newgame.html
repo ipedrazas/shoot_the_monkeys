@@ -1,14 +1,31 @@
+<style>
+
+    .player{
+        font-size:  38px;
+
+        color:  rgba(253, 127, 11, 1);
+        padding-right:  20px;
+    }
+
+    h1{
+        background-color:  papayawhip;
+    }
 
 
-<div class="col-lg-4">
-     <button class="btn btn-info" ng-click="addPlayer(newplayer)">Add New Player</button>
+</style>
+
+<div class="col-lg-7">
     <input type="text" ng-model="newplayer" placeholder="Enter the name of the new player" class="form-control">
+
+</div>
+<div class="col-lg-1">
+    <button class="btn btn-info" ng-click="addPlayer(newplayer)">Add New Player</button>
 </div>
 
-<div class="col-lg-4">
+<div class="col-lg-8">
     <h1>Players</h1>
-    <ul class="list-unstyled" ng-repeat="player in players">
-        <li>{{player}}</li>
+    <ul class="list-unstyled player" ng-repeat="player in players">
+        <li><span class="glyphicon glyphicon-user player"></span>{{player.name}}</li>
     </ul>
 </div>
 <div class="col-lg-8">
