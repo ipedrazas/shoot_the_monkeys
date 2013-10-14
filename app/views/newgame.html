@@ -11,23 +11,32 @@
         background-color:  papayawhip;
     }
 
-
+.container{
+    margin-top:  60px;
+}
 </style>
 
-<div class="col-lg-7">
-    <input type="text" ng-model="newplayer" placeholder="Enter the name of the new player" class="form-control">
+<div class="container">
+    <div class="row">
+    <div class="col-lg-5">
+        <input type="text" ng-model="newplayer" placeholder="Enter the name of the new player" class="form-control">
 
+    </div>
+    <div class="col-lg-1">
+        <button class="btn btn-info" ng-click="addPlayer(newplayer)">Add New Player</button>
+    </div>
 </div>
-<div class="col-lg-1">
-    <button class="btn btn-info" ng-click="addPlayer(newplayer)">Add New Player</button>
-</div>
-
-<div class="col-lg-8">
-    <h1>Players</h1>
-    <ul class="list-unstyled player" ng-repeat="player in players">
-        <li><span class="glyphicon glyphicon-user player"></span>{{player.name}}</li>
-    </ul>
-</div>
-<div class="col-lg-8">
-    <a href="#/play" class="btn btn-danger btn-lg col-lg-8">Play!</a>
+<div class="row">
+    <div class="col-lg-6">
+        <h1>Players</h1>
+        <ul class="list-unstyled player" ng-repeat="player in players">
+            <li><span class="glyphicon glyphicon-user player"></span>{{player.name}}</li>
+        </ul>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6">
+        <a href="#/play" class="btn btn-danger btn-lg col-lg-8">Play!</a>
+    </div>
+    </div>
 </div>
