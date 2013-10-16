@@ -1,38 +1,41 @@
 <style>
 
     .header{
-        margin-top:  60px;
+        margin-top:  40px;
         margin-bottom: 60px;
         color: rgb(166, 198, 255);
         background-color: rgb(52, 85, 136);
-        padding-left:  45px;
-
+        /*padding-left:  45px;*/
+        padding:  20px 35px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        width: 60%;
     }
 
     .title{
-        font-size:  30px;
+        font-size:  22px;
 
     }
 
 </style>
 
 <div class="hero-unit">
-    <h1>Shoot The Monkeys</h1>
-    <h3>A Makey Makey Game</h3>
+    <h1>Shoot The Monkeys <small>A Makey Makey Game</small></h1>
 
-<div class="header">
 
-    <div class="row">
-        <span class="title col-lg-6">Round:</span>
+    <div class="header">
+
+        <div class="row">
+            <span class="title col-lg-6">Round: {{round}}</span>
+        </div>
+        <div class="row">
+            <span class="title col-lg-6">Player: {{player}}</span>
+        </div>
+        <div class="row">
+            <span class="title col-lg-6">Score: {{score}}</span>
+        </div>
     </div>
-    <div class="row">
-        <span class="title col-lg-6">Player:</span>
-    </div>
-    <div class="row">
-        <span class="title col-lg-6">Score:</span>
-    </div>
-</div>
-  <ul class="list-inline">
-      <li ng-repeat="monkey in monkeys" class="monkey" ng-class="{enabled: monkey.state, disabled: !monkey.state}"></li>
-  </ul>
+    <ul class="list-inline col-lg-12">
+        <li ng-repeat="monkey in monkeys" class="monkey" ng-class="{enabled: monkey.state, disabled: !monkey.state}"></li>
+    </ul>
 </div>

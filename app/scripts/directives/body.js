@@ -2,14 +2,6 @@
 
 
 
-        function log(entry){
-        if( console && console.log ) {
-        console.log(entry);
-        }
-        }
-
-
-
 angular.module('MonkeysApp').directive('body', function () {
     return {
             restrict: 'E',
