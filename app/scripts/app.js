@@ -13,7 +13,7 @@ angular.module('MonkeysApp', [])
       })
       .when('/play', {
         templateUrl: 'views/play.html',
-        controller: 'MainCtrl'
+        controller: 'PlayCtrl'
       })
       .otherwise({
         redirectTo: '/'
